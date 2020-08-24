@@ -38,13 +38,12 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
 	viewController = [[GrowingTextViewExampleViewController alloc] init];
 	
-    // Add the view controller's view to the window and display.
-    [window addSubview:viewController.view];
+    self.window.rootViewController = viewController;
     [window makeKeyAndVisible];
 
     return YES;

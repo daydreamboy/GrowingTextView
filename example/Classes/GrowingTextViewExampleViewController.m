@@ -55,7 +55,7 @@
 	self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
 	
-    containerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, 320, 40)];
+    containerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 84, 320, 40)];
     
 	textView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(6, 3, 240, 40)];
     textView.isScrollable = NO;
@@ -134,7 +134,7 @@
     
 	// get a rect for the textView frame
 	CGRect containerFrame = containerView.frame;
-    containerFrame.origin.y = self.view.bounds.size.height - (keyboardBounds.size.height + containerFrame.size.height);
+    containerFrame.origin.y = self.view.bounds.size.height - (keyboardBounds.size.height + containerFrame.size.height - 44);
 	// animations settings
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationBeginsFromCurrentState:YES];
